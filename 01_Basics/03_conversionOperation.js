@@ -39,6 +39,11 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 // "" => false
 // "asxsxa" => true
 
+let someNumber = 33
+let StringNumber = String(someNumber)
+console.log(typeof StringNumber);
+console.log(StringNumber);
+
 // ************** Operation ******************
 
 let value = 3
