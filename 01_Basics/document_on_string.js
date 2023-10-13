@@ -121,7 +121,7 @@ const p2 = "The quick brown fox jumps over the lazy dog."
 
 // =================================================================================
 
-// slice() => takes a pattern and divide the dtring into that pattern in an array return.
+// split() => takes a pattern and divide the string into that pattern in an array return.
 
 const P3 = "The-quick-brown-fox-jumps-over-the-lazy-dog."
 store = P3.split("-" , 3); // limit

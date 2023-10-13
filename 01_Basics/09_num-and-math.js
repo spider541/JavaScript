@@ -26,7 +26,7 @@ const hundreds = 1000000
 // console.log(Math.min(4, 5, 9 ,2)); // selecting from array
 // console.log(Math.max(4, 5, 9 ,2));
 // ==========================================
-// console.log(Math.random()); // always come bw 0 - 1 and in decimal.
+// console.log(Math.random()); // always come b/w 0 - 1 and in decimal.
 // console.log(Math.random()*10); // making it in >0.
 // console.log((Math.random()*10) + 1); // 0 - 1 maybe 0.04,0.06 after *10 0.4,0.6 to avoid it +1
 // console.log(Math.floor((Math.random()*10) + 1)); // using floor and ceil to wrapup a single number.
