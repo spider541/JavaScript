@@ -7,9 +7,7 @@
 //     return item
 // })
 
-// foreach doesn't return anything.
-
-// console.log(values);
+// console.log(values);  // foreach doesn't return anything.
 
 const myNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // filter is a call back function and return in array and always give condition to it.

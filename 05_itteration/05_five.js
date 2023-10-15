@@ -17,11 +17,12 @@ const coding = ["JS", "C++", "Python", "Java"]
 
 
 // Best way to explain call by function
-function printMe(item){
+
+function printMe(item){  
     console.log(item);
 }
 
-// coding.forEach(printMe);
+// coding.forEach(printMe); // Just give the function reference don't execute.
 
 coding.forEach((item, index, arr) => {
     // console.log(item, index, arr);

@@ -27,10 +27,10 @@ function sutta(){
 
 // sutta() // undefined
 
-// const Anothersutta = function () {
-//     let username = "rohit"
-//     console.log(this.username);
-// }
+const Anothersutta = function () {
+    let username = "rohit"
+    console.log(this.username);
+}
 // Anothersutta() //undefined
 
 //===============================================================================================
