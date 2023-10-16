@@ -1,32 +1,35 @@
 <!-- 
     For DOM learning we need a html file. DOM - Document Object Model
-    1. go to google log => console.log(window)
+
+    1. go to any website then google console => console.log(window)
     2. in window we are looking for document => console.log(window.document)
      though it is a object but we can use directly => console.log(document)
-    
-    3. but it is bit different in window.document for that => console.dir(doument)
+    but it is bit different from console.log(window) under document ,in window.document for that                 => console.dir(doument)
 
-    4. console.log(document. and getting syggestion)
+    4. console.log(document. and getting syggestions)
 
     5. console.log(document.baseURI) // give the url
 
-    6. console.log(document.links) // return in HTML collection this is not an array, we need to covert
+    6. console.log(document.links) // return in HTML collection this is not an array, we can covert it to Array
 
     7. document.getElementById('') // select a particular element by it's id
 
     8. document.getElementById('firstHeading').innerHTML = "<h1>Rohit</h1>" // little modify
 
-    9. Learning about selectors
+    9. Learning about selectors(On Google Chrome Console)
 
         A. document.getElementById("title") // select by id
-         and also access it's different property by using dot.
-         document.getElementById("title").id / document.getElementById("title").className
+           we can further access it's different prperty by using dot(.).
+           document.getElementById("title").id / document.getElementById("title").className
 
         B.document.getElementById("title").getAttribute("id")
           document.getElementById("title").getAttribute("class")
+
           document.getElementById("title").setAttribute("class" , "test heading")
 
         C . const title = document.getElementById("title")
+            
+            Access all CSS property .............
             title.style.backgroundColor = 'green'
             title.style.padding = '15px'
             title.style.borderRadius = '15px'
@@ -37,38 +40,37 @@
             title.innerHTML
 
             difference b/w textContent and innerText
-            in textContent display none can also be shown.
+            in textContent display none can means hidden content also be shown.
             and title.innerHTML show all context with html tag.
+            but innerText only shows the visible content
 
         E. document.querySelector('h1') // find the first element
             document.querySelector('#title') // same like css
             document.querySelector('.heading')
             document.querySelector('input[type="password"]')
 
+        F. Selecting a single element
 
             document.querySelector('ul')
-
             const myul = document.querySelector('ul')
-
             myul.querySelector('li')
-
             const turnGreen = myul.querySelector('li')
             turnGreen.style.backgroundColor = 'green'
             turnGreen.style.padding = '10px'
             turnGreen.innerText = 'five'
 
-
-            const tempList = document.querySelectorAll('li') // this is not an array is a node List
+        G. Selecting multiple element
+            const tempList = document.querySelectorAll('li') // return type is not an array it is a node List
             tempList[0].style.color = 'red'
 
             const myH1 = document.querySelectorAll('h1')
-            myH1[0].style.color = 'red'
+            myH1[0].style.color = 'red' // basic is same , though it has only one element.
 
-            tempList.forEach((l) => { l.style.backgroundColor = 'orange'})
+            tempList.forEach((l) => { l.style.backgroundColor = 'orange'}) // foreach can use because it has return node list that has the property foreach.
 
-            document.getElementsByClassName('list-item') // html collection
+            const tempClassList = document.getElementsByClassName('list-item') // html collection
 
-            const myCovertedArray = Array.from(tempClassList)
+            const myConvertedArray = Array.from(tempClassList)
             myCovertedArray.forEach((li) => li.style.color = 'red')
 
 -->
