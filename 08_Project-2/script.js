@@ -7,10 +7,11 @@ form.addEventListener('submit', function(e){
     e.preventDefault() // stop form action
 
     // There has a diff. b/w parseint and number.
-    // const height = parseInt(document.querySelector('#height').value , 10) // convert string to int
-    const height = Number(document.querySelector('#height').value) // convert string to int
-    // const weight = parseInt(document.querySelector('#weight').value , 10) // convert string to int
-    const weight = Number(document.querySelector('#weight').value) // convert string to int
+    const height = parseInt(document.querySelector('#height').value) // convert string to int
+    // const height = Number(document.querySelector('#height').value) // convert string to int
+
+    const weight = parseInt(document.querySelector('#weight').value) // convert string to int
+    // const weight = Number(document.querySelector('#weight').value) // convert string to int
 
     const result = document.querySelector("#result")
 
@@ -29,7 +30,7 @@ form.addEventListener('submit', function(e){
         // Text shoown in next line
         const br = document.createElement('br')
         result.appendChild(br)
-        
+
         if(bmi < 18.6){
             const text = document.createTextNode("You are Under Weight")
             result.appendChild(text)
