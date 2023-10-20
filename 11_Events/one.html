@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventss</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <!-- onclick="alert('owl')" don't use this in img tag, not a scalable method-->
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><a style="color: rgb(159, 181, 201);" href="https://google.com" id="google" target="_blank">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // atachEvent() used in internet explorer
+    // jQuery - .on
+    // we are using modern approach
+
+    // type, timestamp, preventDefault
+    // targrt, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // ---------------function is called event handler function and the parameter e is event object.
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // console.log(e);
+    //     // console.log(e.target);
+    //     // console.log(e.type);
+    //     // console.log(e.timeStamp);
+    //     // console.log(e.preventDefault);
+    //     // console.log(e.srcElement);
+    //     // console.log(e.currentTarget);
+    //     // console.log(e.clientX);
+    //     // console.log(e.clientY);
+    //     // console.log(e.screenX);
+    //     // console.log(e.screenY);
+    //     // console.log(e.altKey);
+    //     // alert('Owl clicked again')
+
+    //     console.log("Clicked in owl");
+    //     // if i don't want to bubble up
+    //     e.stopPropagation()
+    // }, false) //by default false => Event propogation- bubling up= inside to outside move
+
+    // document.getElementById('images').addEventListener('click', (e) => {
+    //     console.log("Clicked inside the ul");
+    // },false) // but if i set both true => capturing mode = top to bottoms
+
+
+    // prevent default example  ================
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //     console.log("goggle clicked");
+    //     e.preventDefault()
+    //     // and for stop bubling 
+    //     e.stopPropagation()
+    // }, false)// by default false => bubling up
+
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        // only remove the li element
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt) // another way to remove little confusing
+    })
+</script>
+</html>
