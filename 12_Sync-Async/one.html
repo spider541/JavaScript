@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync and Async</title>
+</head>
+<body>
+    <h1>Learnig the concepts Sync and Async code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // After the specific time it will run only one time.
+    // setTimeout(function () {
+    //     console.log("Rohit");
+    // }, 2000 )
+
+    // After the specific time it will run continiously
+    // setInterval(function(){
+    //     console.log("Hello Fucker's");
+    // }, 4000)
+
+
+    // Another Way just giving the function reference
+    
+    const sayMyname = function(){
+        console.log("Rohit");
+    }
+    // setTimeout(sayMyname, 2000)
+
+    // Changing the heading using setTimeout
+
+    const changeHeading = function(){
+        document.querySelector('h1').innerHTML = "Learning JavaScript with passion"
+    }
+    const changeMe = setTimeout(changeHeading, 2000)
+
+    // now learning about clear timeout
+    // clearTimeout(changeMe) // it will just stop the settimeout process
+
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stop The Event");
+    })
+
+</script>
+</html>
